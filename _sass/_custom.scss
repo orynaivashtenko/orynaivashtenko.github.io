@@ -1,0 +1,193 @@
+/*******************************************************************************
+ * Site-specific style overrides for orynaivashtenko.github.io
+ * (loaded after all gem-owned partials from assets/css/main.scss)
+ ******************************************************************************/
+
+// Accent colour: navy blue instead of the template's magenta
+:root,
+html[data-theme="dark"] {
+  --global-theme-color: #1f3a93;
+  --global-hover-color: #1f3a93;
+  --global-highlight-color: #1f3a93;
+}
+
+// ---------------------------------------------------------------------------
+// About page header: centred name, subtitle, thin rule
+// ---------------------------------------------------------------------------
+.about-header {
+  text-align: center;
+  margin-top: 1.5rem;
+  margin-bottom: 1.75rem;
+
+  .about-name {
+    font-size: 2.6rem;
+    font-weight: 300;
+    letter-spacing: 0.01em;
+    margin-bottom: 0.35rem;
+  }
+
+  .about-subtitle {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: var(--global-text-color-light);
+    margin-bottom: 1.25rem;
+
+    a {
+      color: inherit;
+      border-bottom: 1px dotted var(--global-text-color-light);
+
+      &:hover {
+        color: var(--global-theme-color);
+        border-bottom-color: var(--global-theme-color);
+        text-decoration: none;
+      }
+    }
+  }
+
+  hr.about-rule {
+    width: 100%;
+    margin: 0 auto;
+    border: 0;
+    border-top: 1px solid var(--global-divider-color);
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Profile block: photo, small contact icons, small affiliation in body font
+// ---------------------------------------------------------------------------
+.profile {
+  .profile-contact {
+    text-align: center;
+    margin-top: 0.6rem;
+    font-size: 1.15rem;
+    line-height: 1;
+
+    a {
+      display: inline-block;
+      margin: 0 0.3rem;
+
+      i::before {
+        color: var(--global-text-color-light);
+        transition: color 0.2s ease-in-out;
+      }
+
+      img,
+      svg {
+        width: 1.1rem;
+        height: 1.1rem;
+        vertical-align: -0.15rem;
+      }
+
+      &:hover {
+        text-decoration: none;
+
+        i::before {
+          color: var(--global-theme-color);
+        }
+      }
+    }
+  }
+
+  .more-info {
+    font-family: inherit;
+    font-size: 0.8rem;
+    line-height: 1.35;
+    color: var(--global-text-color-light);
+    text-align: center;
+    margin-top: 0.5rem;
+
+    p {
+      display: block;
+      margin: 0;
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Section headings on the about page
+// ---------------------------------------------------------------------------
+.post article h2 {
+  font-size: 1.35rem;
+  font-weight: 400;
+  margin-top: 1.75rem;
+  margin-bottom: 0.6rem;
+}
+
+// ---------------------------------------------------------------------------
+// Publications: compact entries, small text links instead of buttons
+// ---------------------------------------------------------------------------
+.publications {
+  h2.pub-group {
+    font-size: 1.35rem;
+    font-weight: 400;
+    margin-top: 1.75rem;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid var(--global-divider-color);
+  }
+
+  ol.bibliography li {
+    margin-bottom: 0.9rem;
+
+    .title {
+      font-weight: 500;
+      line-height: 1.35;
+    }
+
+    .author,
+    .periodical {
+      font-size: 0.92rem;
+      line-height: 1.4;
+    }
+
+    .author > em {
+      border-bottom: 1px solid var(--global-text-color-light);
+    }
+
+    .periodical {
+      color: var(--global-text-color-light);
+    }
+
+    .links {
+      font-size: 0.85rem;
+      margin-top: 0.1rem;
+
+      a.pub-link {
+        color: var(--global-theme-color);
+        border: 0;
+        padding: 0;
+        margin: 0;
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      .sep {
+        color: var(--global-text-color-light);
+        margin: 0 0.35rem;
+      }
+    }
+
+    .hidden {
+      font-size: 0.85rem;
+
+      p {
+        margin: 0.5rem 0.25rem;
+      }
+    }
+
+    div.abstract.hidden.open {
+      border: 0;
+      border-left: 2px solid var(--global-divider-color);
+      padding-left: 0.5rem;
+      margin-top: 0.35rem;
+    }
+  }
+}
+
+// "References" block at the bottom of project pages
+.post > h2 + .publications {
+  margin-top: 0.5rem;
+}

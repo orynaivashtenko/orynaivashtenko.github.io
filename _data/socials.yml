@@ -7,7 +7,7 @@ github_username: orynaivashtenko # your GitHub user name
 cv_pdf: /assets/pdf/CV_Oryna_Ivashtenko.pdf # path to your CV PDF file
 # scholar_userid: # your Google Scholar ID
 # linkedin_username: # your LinkedIn user name
-ads:
+scix:
   logo: ai ai-ads
-  title: NASA ADS
-  url: https://ui.adsabs.harvard.edu/search/q=author%3A%22Ivashtenko%2C%20O%22&sort=date%20desc%2C%20bibcode%20desc
+  title: SciX (NASA Science Explorer)
+  url: https://scixplorer.org/search?q=author%3A%22Ivashtenko%2C%20O%22&sort=date%20desc

@@ -1,0 +1,95 @@
+---
+---
+{% comment %}
+  Local override of the al_folio_core "bib" layout: a compact entry with
+  title, authors, venue + year, and small text links (abstract / arXiv / DOI /
+  journal / bib). The abstract and bibtex toggles keep the class names that
+  assets/js/common.js expects (a.abstract, a.bibtex, .abstract.hidden, .bibtex.hidden).
+{% endcomment %}
+<div class="row">
+  <div id="{{ entry.key }}" class="col-sm-12">
+    <!-- Title -->
+    <div class="title">{{ entry.title }}</div>
+
+    <!-- Authors -->
+    <div class="author">
+      {% assign author_array_size = entry.author_array | size %}
+      {%- for author in entry.author_array -%}
+        {% assign author_is_self = false %}
+        {%- assign author_last_name = author.last | regex_replace: '[*∗†‡§¶‖&^]', '' -%}
+        {% if site.scholar.last_name contains author_last_name %}
+          {% if site.scholar.first_name contains author.first %}
+            {% assign author_is_self = true %}
+          {% endif %}
+        {%- endif -%}
+        {%- if forloop.length > 1 -%}
+          {% if forloop.first == false -%}
+            {%- if forloop.length > 2 %}, {% elsif forloop.length == 2 %}  {% endif %}
+          {%- endif %}
+          {%- if forloop.last %}and {% endif -%}
+        {% endif %}
+        {%- if author_is_self -%}
+          <em>{{ author.first }} {{ author.last }}</em>
+        {%- else -%}
+          {{ author.first }} {{ author.last }}
+        {%- endif -%}
+      {% endfor %}
+    </div>
+
+    <!-- Venue and year -->
+    {% assign proceedings = 'inproceedings,incollection' | split: ',' %}
+    {% if entry.type == 'article' %}
+      {% capture entrytype %}<em>{{ entry.journal }}</em>{% endcapture %}
+    {% elsif proceedings contains entry.type %}
+      {% capture entrytype %}<em>In {{ entry.booktitle }}</em>{% endcapture %}
+    {% else %}
+      {% capture entrytype %}{% endcapture %}
+    {% endif %}
+    {% capture details %}
+      {%- if entry.volume %} {{ entry.volume }}{% endif -%}
+      {%- if entry.pages %}, {{ entry.pages }}{% endif -%}
+    {% endcapture %}
+    {% assign entrytype_text = entrytype | strip_html | strip %}
+    <div class="periodical">
+      {{ entrytype }}{{ details | strip }}{% if entrytype_text != "" and entry.year %}, {% endif %}{{ entry.year }}
+    </div>
+
+    <!-- Links -->
+    <div class="links">
+      {% assign first_link = true %}
+      {% if entry.abstract %}
+        <a class="abstract pub-link" role="button">abstract</a>
+        {% assign first_link = false %}
+      {% endif %}
+      {% if entry.arxiv %}
+        {% unless first_link %}<span class="sep">·</span>{% endunless %}
+        <a href="https://arxiv.org/abs/{{ entry.arxiv }}" class="pub-link">arXiv</a>
+        {% assign first_link = false %}
+      {% endif %}
+      {% if entry.doi and entry.type == 'article' and entry.journal != 'arXiv e-prints' %}
+        {% unless first_link %}<span class="sep">·</span>{% endunless %}
+        <a href="https://doi.org/{{ entry.doi }}" class="pub-link">journal</a>
+        {% assign first_link = false %}
+      {% endif %}
+      {% if entry.bibtex_show %}
+        {% unless first_link %}<span class="sep">·</span>{% endunless %}
+        <a class="bibtex pub-link" role="button">bib</a>
+        {% assign first_link = false %}
+      {% endif %}
+    </div>
+
+    {% if entry.abstract %}
+      <div class="abstract hidden">
+        <p>{{ entry.abstract }}</p>
+      </div>
+    {% endif %}
+
+    {% if entry.bibtex_show %}
+      <div class="bibtex hidden">
+        {% highlight bibtex %}
+        {{- entry.bibtex | hideCustomBibtex -}}
+        {% endhighlight %}
+      </div>
+    {% endif %}
+  </div>
+</div>

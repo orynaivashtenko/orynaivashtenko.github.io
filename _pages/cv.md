@@ -16,25 +16,17 @@ Department of Particle Physics and Astrophysics, Weizmann Institute of Science, 
 ## Education
 
 **Ph.D. in Physics, Weizmann Institute of Science** (2022–2027, expected 2027)
-Advisor: Barak Zackay. Thesis: *Detection methods and population studies of extrasolar planets.*
+Advisor: Barak Zackay.
 
 **M.Sc. in Physics, Weizmann Institute of Science** (2019–2022)
-Advisor: Barak Zackay. Thesis: *Looking for "blue" planets orbiting "yellow" stars.* GPA 92.5.
+Advisor: Barak Zackay. GPA 92.5.
 
 **B.Sc. in Applied Physics, V. N. Karazin Kharkiv National University, Ukraine** (2015–2019)
 With honors, GPA 96.9.
 
 ## Publications
 
-See the [publications](/publications/) page, [ADS](https://ui.adsabs.harvard.edu/search/q=author%3A%22Ivashtenko%2C%20O%22&sort=date%20desc%2C%20bibcode%20desc), or [ORCID](https://orcid.org/0000-0002-2805-9405).
-
-## Awards and fellowships
-
-- 2024 — FGS Dean Award of Excellence in Physics/Chemistry/Math & CS-oriented Research for Outstanding International Doctoral Students
-- 2023 — Ph.D. Scholarship in Data Science, Weizmann Data Science Research Center, supported by the Israeli Council for Higher Education
-- 2022 — The Suzan Sapir Memorial Prize for M.Sc. students
-- 2019 — Prize of Excellence, Andre Deloro Research School
-- 2017–2019 — Scholarship of the Ukrainian Parliament
+See the [publications](/publications/) page, [SciX](https://scixplorer.org/search?q=author%3A%22Ivashtenko%2C%20O%22&sort=date%20desc), or [ORCID](https://orcid.org/0000-0002-2805-9405).
 
 ## Talks and research visits
 
@@ -64,6 +56,14 @@ See the [publications](/publications/) page, [ADS](https://ui.adsabs.harvard.edu
 - 2025 — Know Thy Star Know Thy Planet 2, Caltech, Pasadena, CA — poster
 - 2025 — 245th meeting of the American Astronomical Society, National Harbor, MD — talk
 - 2024 — 243rd meeting of the American Astronomical Society, New Orleans, LA — talk
+
+## Awards and fellowships
+
+- 2024 — FGS Dean Award of Excellence in Physics/Chemistry/Math & CS-oriented Research for Outstanding International Doctoral Students
+- 2023 — Ph.D. Scholarship in Data Science, Weizmann Data Science Research Center, supported by the Israeli Council for Higher Education
+- 2022 — The Suzan Sapir Memorial Prize for M.Sc. students
+- 2019 — Prize of Excellence, Andre Deloro Research School
+- 2017–2019 — Scholarship of the Ukrainian Parliament
 
 ## Teaching and mentoring
 
