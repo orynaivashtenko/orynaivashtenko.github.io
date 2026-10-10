@@ -1,13 +1,18 @@
 ---
 layout: page
 permalink: /publications/
-title: publications
-description: Also listed on SciX and ORCID, see the links below.
+title: Publications
+description:
 nav: true
 nav_order: 1
 ---
 
 <!-- _pages/publications.md -->
+
+<p class="pub-external">
+  Full list on <a href="https://scixplorer.org/search?q=author%3A%22Ivashtenko%2C%20O%22&sort=date%20desc">SciX</a>
+  and <a href="https://orcid.org/0000-0002-2805-9405">ORCID</a>.
+</p>
 
 <div class="publications">
 
@@ -20,8 +25,3 @@ nav_order: 1
 {% bibliography --group_by none --query @*[role=contributed]* %}
 
 </div>
-
-<p class="pub-external">
-  Full list on <a href="https://scixplorer.org/search?q=author%3A%22Ivashtenko%2C%20O%22&sort=date%20desc">SciX</a>
-  and <a href="https://orcid.org/0000-0002-2805-9405">ORCID</a>.
-</p>

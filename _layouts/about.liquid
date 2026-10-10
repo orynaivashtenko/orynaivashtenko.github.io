@@ -3,8 +3,10 @@ layout: default
 ---
 {% comment %}
   Local override of the al_folio_core "about" layout:
-  centred name (no bold), subtitle, thin rule; contact icons and affiliation
-  sit under the photo; no news / posts / selected papers sections.
+  right-aligned name (no bold), subtitle, thin rule; the intro text (everything
+  before the first <h2>) sits in a fixed-width column next to the photo, with the
+  contact icons and affiliation under the photo; the remaining sections follow
+  at full width.
 {% endcomment %}
 <div class="post">
   <header class="post-header about-header">
@@ -20,30 +22,40 @@ layout: default
   </header>
 
   <article>
-    {% if page.profile %}
-      <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
-        {% if page.profile.image %}
-          {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-          {% if page.profile.image_circular %}
-            {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
-          {% else %}
-            {% assign profile_image_class = 'img-fluid z-depth-1 rounded' %}
+    {% assign content_parts = content | split: '<h2' %}
+
+    <div class="about-intro">
+      <div class="about-intro-text">{{ content_parts[0] }}</div>
+
+      {% if page.profile %}
+        <div class="profile">
+          {% if page.profile.image %}
+            {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+            {% if page.profile.image_circular %}
+              {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
+            {% else %}
+              {% assign profile_image_class = 'img-fluid z-depth-1 rounded' %}
+            {% endif %}
+            {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px) 30vw, 95vw{% endcapture %}
+            {%
+              include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
+              cache_bust=true
+            %}
           {% endif %}
-          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px) 30vw, 95vw{% endcapture %}
-          {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
-            cache_bust=true
-          %}
-        {% endif %}
-        {% if page.social %}
-          <div class="profile-contact">{% social_links %}</div>
-        {% endif %}
-        {% if page.profile.more_info %}
-          <div class="more-info">{{ page.profile.more_info }}</div>
-        {% endif %}
+          {% if page.social %}
+            <div class="profile-contact">{% social_links %}</div>
+          {% endif %}
+          {% if page.profile.more_info %}
+            <div class="more-info">{{ page.profile.more_info }}</div>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+
+    {% if content_parts.size > 1 %}
+      <div class="about-rest">
+        {% for part in content_parts offset: 1 %}<h2{{ part }}{% endfor %}
       </div>
     {% endif %}
-
-    <div class="clearfix">{{ content }}</div>
   </article>
 </div>

@@ -11,7 +11,6 @@ profile:
   more_info: >
     <p>Department of Particle Physics and Astrophysics</p>
     <p>Weizmann Institute of Science</p>
-    <p>Rehovot, Israel</p>
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # contact icons are shown under the photo
@@ -34,7 +33,7 @@ You can see my [CV](/cv/) and [publications](/publications/), or find me on [Sci
 
 ## Scientific interests
 
-Detection and statistical population studies of exoplanets, binary stars, and compact objects. I like luminous things that orbit one another and leave signatures in the data. I like to detect them and count them in a sophisticated way, to then infer physics from the counts.
+I am currently interested in detection and statistical population studies of exoplanets, binary stars, and compact objects. I like luminous things that orbit one another and leave signatures in the data. I like to detect them and count them in a sophisticated way, to then infer physics from the counts. In general, I like various elegant statistical problems that help us understand physics.
 
 ## Experience
 

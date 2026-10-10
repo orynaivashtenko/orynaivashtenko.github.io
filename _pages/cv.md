@@ -4,8 +4,10 @@ permalink: /cv/
 title: CV
 nav: true
 nav_order: 3
-description: <a href="/assets/pdf/CV_Oryna_Ivashtenko.pdf" target="_blank">Download as PDF</a>
+description:
 ---
+
+[Download as PDF](/assets/pdf/CV_Oryna_Ivashtenko.pdf){:target="_blank"}
 
 **Oryna Ivashtenko**
 Department of Particle Physics and Astrophysics, Weizmann Institute of Science, Rehovot, Israel

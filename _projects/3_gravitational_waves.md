@@ -1,13 +1,15 @@
 ---
 layout: page
-title: Gravitational-wave inference and precessing searches
-description: Sampler-free parameter estimation for compact binary coalescences, and template banks for precessing binary black holes.
+title: Gravitational-wave precessing search
+description: Detecting precessing compact binary coalescences in LIGO data, getting their parameter posteriors, and computing the evidence — very quickly.
 importance: 3
 related_publications: true
 ---
 
-The same questions that drive my exoplanet work, how to detect a weak signal reliably and how to compute a posterior quickly enough to use it at scale, appear in gravitational-wave astronomy, and I am part of a group working on both.
+The same questions that drive my exoplanet work, how to detect a weak signal reliably and how to compute a posterior quickly enough to use it at scale, appear in gravitational-wave astronomy, and are even more complex there. I have been a part of a group working on detecting and characterizing compact binary mergers in LIGO data, showing signatures of spin-orbital precession. The detection project was led by Zihan Zhou, and the parameter estimation project by Jonathan Mushkin.
 
-In {% cite Mushkin2025dotPE %} we present a method to compute the posterior distribution of a compact binary coalescence without a stochastic sampler. We select sets of intrinsic and extrinsic parameters that efficiently cover the relevant phase space and evaluate the likelihood for all their combinations with dot products, with a controllable integration accuracy. Full parameter estimation then takes minutes on a single CPU. The method is implemented in the dot-PE package and makes it possible to run searches that use the full evidence integral for precessing binaries with waveform banks of 10<sup>5</sup>–10<sup>6</sup> templates.
+In {% cite Mushkin2025dotPE %} a method was developed to compute the posterior distribution of a compact binary coalescence without a stochastic sampler. The full parameter estimation in the 15-dimensional parameter space of a compact binary merger is very computationally expensive and is one of the major bottlenecks in gravitational-wave inference. Jonathan split the parameters into two sets, intrinsic and extrinsic, and found a way to evaluate the likelihood for all their combinations with dot products. Full parameter estimation then takes minutes on a single CPU. This speed enables the use of the full evidence integral for detection, rather than a simplified detection statistic.
 
-In {% cite Zhou2026precessing %} we address searches for binary black holes whose spins are misaligned with the orbital angular momentum, which almost all previous LIGO–Virgo–KAGRA searches have neglected. Using the precession harmonic decomposition, we filter each harmonic separately and marginalize over the harmonic signal-to-noise ratios in the detection statistic; marginalizing rather than maximizing increases the sensitive volume of the search by about 10%.
+The work {% cite Zhou2026precessing %} builds a search pipeline for binary black holes whose spins are misaligned with the orbital angular momentum, a feature that almost all previous LIGO–Virgo–KAGRA searches have neglected. Using the precession harmonic decomposition, the search applies matched filtering to each harmonic separately and computes the final detection score by marginalizing over the harmonic signal-to-noise ratios.
+
+I collaborated on this project in 2023, working with my supervisor Barak Zackay, and with Matias Zaldarriaga.
