@@ -212,12 +212,11 @@ html[data-theme="dark"] {
       border-bottom: 1px solid var(--global-text-color-light);
     }
 
-    .periodical {
-      color: var(--global-text-color-light);
-
-      em {
-        font-style: normal;
-      }
+    .periodical,
+    .periodical em,
+    .periodical span {
+      color: var(--global-text-color-light) !important;
+      font-style: normal;
     }
 
     .links {

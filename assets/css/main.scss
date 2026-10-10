@@ -34,3 +34,8 @@
 
 // Site-specific overrides (local file, loaded last)
 @use "custom";
+
+// Bump this number whenever _sass/_custom.scss changes: it makes the
+// main.css?v= cache-buster change so browsers fetch the new stylesheet
+// (al_folio_core 1.0.15 does not hash local _sass partials).
+// style-version: 5
