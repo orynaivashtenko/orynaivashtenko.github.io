@@ -37,4 +37,4 @@ I am currently interested in detection and statistical population studies of exo
 
 ## Experience
 
-Time-series analysis (mainly through Kepler, a bit of TESS and LIGO), a bit of image analysis (mainly through Kepler difference imaging), a bit of astrometry (Gaia), occasional exposure to pulsar astronomy.
+Time-series analysis (mainly through Kepler, a bit of TESS and LIGO), a bit of image analysis (mainly through Kepler difference imaging), a bit of astrometry (Gaia), occasional exposure to pulsar astronomy. I built statistical models, explored new data and figured out how to treat their noise, wrote algorithms from scratch, ran a lot of Monte Carlo simulations, did Bayesian inference, and executed my code on thousands of cores on a shared LSF cluster.
