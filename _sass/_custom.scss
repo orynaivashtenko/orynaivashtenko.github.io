@@ -6,9 +6,9 @@
 // Accent colour: navy blue instead of the template's magenta
 :root,
 html[data-theme="dark"] {
-  --global-theme-color: #1f3a93;
-  --global-hover-color: #1f3a93;
-  --global-highlight-color: #1f3a93;
+  --global-theme-color: #1d4ed8;
+  --global-hover-color: #1d4ed8;
+  --global-highlight-color: #1d4ed8;
 }
 
 // Navbar brand (name at top-left on inner pages): no bold first name
@@ -114,7 +114,7 @@ html[data-theme="dark"] {
     align-items: center;
     margin-top: 0.7rem;
     padding: 0 0.15rem;
-    font-size: 1.55rem;
+    font-size: 2rem;
     line-height: 1;
 
     a {
@@ -128,9 +128,9 @@ html[data-theme="dark"] {
 
       img,
       svg {
-        width: 1.45rem;
-        height: 1.45rem;
-        vertical-align: -0.2rem;
+        width: 1.85rem;
+        height: 1.85rem;
+        vertical-align: -0.25rem;
       }
 
       &:hover {
@@ -150,13 +150,23 @@ html[data-theme="dark"] {
     color: var(--global-text-color-light);
     margin-top: 0.55rem;
 
-    // each line is justified across the full photo width
+    // line 1 (department) is stretched by word spacing to the photo width;
+    // line 2 (institute) is letter-spaced small caps so it spans the same width
     p {
       display: block;
       margin: 0;
       white-space: nowrap;
       text-align: justify;
       text-align-last: justify;
+    }
+
+    p:nth-child(2) {
+      text-transform: uppercase;
+      letter-spacing: 0.17em;
+      text-align: center;
+      text-align-last: center;
+      font-size: 0.72rem;
+      margin-top: 0.1rem;
     }
   }
 }
@@ -204,6 +214,10 @@ html[data-theme="dark"] {
 
     .periodical {
       color: var(--global-text-color-light);
+
+      em {
+        font-style: normal;
+      }
     }
 
     .links {

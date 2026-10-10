@@ -45,13 +45,9 @@
     {% else %}
       {% capture entrytype %}{% endcapture %}
     {% endif %}
-    {% capture details %}
-      {%- if entry.volume %} {{ entry.volume }}{% endif -%}
-      {%- if entry.pages %}, {{ entry.pages }}{% endif -%}
-    {% endcapture %}
     {% assign entrytype_text = entrytype | strip_html | strip %}
     <div class="periodical">
-      {{ entrytype }}{{ details | strip }}{% if entrytype_text != "" and entry.year %}, {% endif %}{{ entry.year }}
+      {{ entrytype }}{% if entry.volume %} {{ entry.volume }}{% endif %}{% if entry.pages %}, {{ entry.pages }}{% endif %}{% if entrytype_text != "" and entry.year %}, {% endif %}{{ entry.year }}
     </div>
 
     <!-- Links -->
