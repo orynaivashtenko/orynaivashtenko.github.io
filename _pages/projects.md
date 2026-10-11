@@ -1,6 +1,8 @@
 ---
 layout: page
-title: Projects
+title: projects
+_styles: >
+  .post-header .post-title { text-transform: capitalize; }
 permalink: /projects/
 description: Research projects, past and ongoing
 nav: true

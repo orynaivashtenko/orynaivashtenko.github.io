@@ -1,7 +1,9 @@
 ---
 layout: page
 permalink: /publications/
-title: Publications
+title: publications
+_styles: >
+  .post-header .post-title { text-transform: capitalize; }
 description:
 nav: true
 nav_order: 1

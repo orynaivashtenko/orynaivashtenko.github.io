@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Ph.D. candidate in astrophysics, <a href='https://www.weizmann.ac.il/particle/'>Weizmann Institute of Science</a>
+subtitle: Ph.D. candidate in astrophysics, <a href='https://www.weizmann.ac.il/particle/'>Weizmann Institute of Science</a><br>Expected to graduate in spring 2027 and currently on the job market
 
 profile:
   align: right
@@ -29,11 +29,13 @@ I have also worked on gravitational-wave data analysis, searching for precessing
 
 Before Weizmann, I studied applied physics at V. N. Karazin Kharkiv National University in Ukraine.
 
-You can see my [CV](/cv/) and [publications](/publications/), or find me on [SciX](https://scixplorer.org/search?q=author%3A%22Ivashtenko%2C%20O%22&sort=date%20desc) and [ORCID](https://orcid.org/0000-0002-2805-9405).
+You can see my [CV](/cv/) and [publications](/publications/), find me on [SciX](https://scixplorer.org/search?q=author%3A%22Ivashtenko%2C%20O%22&sort=date%20desc) and [ORCID](https://orcid.org/0000-0002-2805-9405), or watch me giving a seminar talk [here](https://www.youtube.com/watch?v=EhoyC5gLLnE).
 
 ## Scientific interests
 
 I am currently interested in detection and statistical population studies of exoplanets, binary stars, and compact objects. I like luminous things that orbit one another and leave signatures in the data. I like to detect them and count them in a sophisticated way, to then infer physics from the counts. In general, I like various elegant statistical problems that help us understand physics.
+
+I am especially excited about the Gaia DR4 data and the upcoming Roman mission data. These hide lots of new detections inside them and are great for population studies.
 
 ## Experience
 
